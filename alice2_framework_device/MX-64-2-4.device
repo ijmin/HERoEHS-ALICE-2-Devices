@@ -5,11 +5,11 @@ device_type = dynamixel
 [type info]
 torque_to_current_value_ratio   =  1.0  # to be corrected
 #velocity_to_value_ratio        =  4.3668
-value_of_0_radian_position      = 1089
+value_of_0_radian_position      = 3072
 value_of_min_radian_position    = 0
 value_of_max_radian_position    = 4095
-min_radian                      = -0.1745329252
-max_radian                      =  3.176499239
+min_radian                      = -3.14159265
+max_radian                      = 3.14159265
 
 torque_enable_item_name         = torque_enable
 present_position_item_name      = present_position
