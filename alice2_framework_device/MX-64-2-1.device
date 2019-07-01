@@ -1,15 +1,15 @@
 [device info]
-model_name  = MX-64-2-4
+model_name  = MX-64-1-5
 device_type = dynamixel
 
 [type info]
 torque_to_current_value_ratio   =  1.0  # to be corrected
 #velocity_to_value_ratio        =  4.3668
-value_of_0_radian_position      = 3072
+value_of_0_radian_position      = 2048
 value_of_min_radian_position    = 0
 value_of_max_radian_position    = 4095
-min_radian                      = -3.14159265
-max_radian                      = 3.14159265
+min_radian                      = -3.141592
+max_radian                      = 3.141592
 
 torque_enable_item_name         = torque_enable
 present_position_item_name      = present_position
@@ -67,7 +67,7 @@ velocity_p_gain_item_name       = velocity_p_gain
 104    | goal_velocity            | 4      | RW     | RAM    | -1023         | 1023        | Y
 108    | profile_acceleration     | 4      | RW     | RAM    | 0             | 32767       | N
 112    | profile_velocity         | 4      | RW     | RAM    | 0             | 1023        | N
-116    | goal_position            | 4      | RW     | RAM    | 0             | 4095        | N
+# 116    | goal_position            | 4      | RW     | RAM    | 0             | 4095        | N
 120    | realtime_tick            | 2      | R      | RAM    | 0             | 32767       | N
 122    | moving                   | 1      | R      | RAM    | 0             | 1           | N
 123    | moving_status            | 1      | R      | RAM    | 0             | 127         | N 
@@ -79,10 +79,18 @@ velocity_p_gain_item_name       = velocity_p_gain
 140    | position_trajectory      | 4      | R      | RAM    | 0             | 65535       | N
 144    | present_input_voltage    | 2      | R      | RAM    | 95            | 160         | N
 146    | present_temperature      | 1      | R      | RAM    | 0             | 100         | N
-168    |  indirect_address_1      |  2     | RW     | RAM    |   64          |  661        | N
-224    |  indirect_data_1         |  1     | RW     | RAM    |   0           |  255        | N
-578    |  indirect_address_29     |  2     | RW     | RAM    |   64          |  661        | N
-634    |  indirect_data_29        |  1     | RW     | RAM    |   0           |  255        | N
+## 168    |  indirect_address_1      |  2     | RW     | RAM    |   64          |  661        | N
+## 224    |  indirect_data_1         |  1     | RW     | RAM    |   0           |  255        | N
+## 578    |  indirect_address_29     |  2     | RW     | RAM    |   64          |  661        | N
+578 | second_goal_pos_addr1    | 2      | RW     | RAM    | 0             | 65535       | N
+580 | second_goal_pos_addr2    | 2      | RW     | RAM    | 0             | 65535       | N
+582 | second_goal_pos_addr3    | 2      | RW     | RAM    | 0             | 65535       | N
+584 | second_goal_pos_addr4    | 2      | RW     | RAM    | 0             | 65535       | N
+586 | indirect_address_29      | 2      | RW     | RAM    | 0             | 65535       | N
+## 634    |  indirect_data_29        |  1     | RW     | RAM    |   0           |  255        | N
+634    | goal_position            | 4      | RW     | RAM    | 0             | 4095        | N
+638    |  indirect_data_29        |  1     | RW     | RAM    |   0           |  255        | N
+
 
 
 
